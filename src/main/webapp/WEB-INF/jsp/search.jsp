@@ -19,7 +19,8 @@
 				<ul class="navbar">
                                 <li><a href="#">home</a></li>
                                 <li><a href="#">login</a></li>
-                                <li><a href="#">search</a></li>
+                                <!-- The href="/goToSearch" defines the url pattern that will direct you to the search page controller -->
+                                <li><a href="/goToSearch">search</a></li>
                                 <li><a href="#">linkedin</a></li>
                             </ul><!-- navbar -->
 				<!-- navbar -->
@@ -35,6 +36,7 @@
 			<h2 class="headline">Search Products</h2>
 			<form action="/search" method="get">
 				<label class="card-title">Search your product</label>
+				<!-- The path and name define the request parameter that later is used in the search controller -->
 				 <input path="search" name="search" value="">
 			    <input type="submit" value="Search">
 			</form>

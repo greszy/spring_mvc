@@ -12,4 +12,10 @@ public class HomeController {
         //"index" is the name of the view.
         return "index";
     }
+    //This controller handles directing to the search page.
+    @GetMapping("/goToSearch")
+    public String goToSearch(){
+        System.out.println("Going to search page.");
+        return "search";
+    }
 }

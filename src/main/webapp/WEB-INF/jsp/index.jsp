@@ -16,6 +16,7 @@
             <ul class="navbar">
                 <li><a href="/home">home</a></li>
                 <li><a href="/goToLogin">login</a></li>
+                <!-- The href="/goToSearch" defines the url pattern that will direct you to the search page controller -->
                 <li><a href="/goToSearch">search</a></li>
                 <li><a href="redirect">linkedin</a></li>
             </ul><!-- navbar -->
