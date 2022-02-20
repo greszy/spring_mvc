@@ -18,4 +18,16 @@ public class HomeController {
         System.out.println("Going to search page.");
         return "search";
     }
+    //This controller handles directing to the login page.
+    @GetMapping("/goToLogin")
+    public String goToLogin(){
+        System.out.println("Going to login page.");
+        return "login";
+    }
+    //This controller handles directing to the register page.
+    @GetMapping("/goToRegistration")
+    public String goToRegistration(){
+        System.out.println("Going to register page.");
+        return "register";
+    }
 }

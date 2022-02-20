@@ -19,7 +19,7 @@
 				<!-- branding -->
 				<ul class="navbar">
                                 <li><a href="#">home</a></li>
-                                <li><a href="#">login</a></li>
+                                <li><a href="/goToLogin">login</a></li>
                                 <!-- The href="/goToSearch" defines the url pattern that will direct you to the search page controller -->
                                 <li><a href="/goToSearch">search</a></li>
                                 <li><a href="#">linkedin</a></li>
