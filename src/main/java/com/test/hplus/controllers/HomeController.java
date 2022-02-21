@@ -1,7 +1,12 @@
 package com.test.hplus.controllers;
 
+import com.test.hplus.beans.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -29,5 +34,16 @@ public class HomeController {
     public String goToRegistration(){
         System.out.println("Going to register page.");
         return "register";
+    }
+
+    //The register jsp page won't be able to render properly without this default object, because the modelAttribute in the form requires an object to be assigned to it.
+    @ModelAttribute("newUser")
+    public User getDefaultUser() {
+        return new User();
+    }
+
+    @ModelAttribute("genderItems")
+    public List<String> getGenderItems() {
+        return Arrays.asList(new String[]{"Male", "Female", "Other"});
     }
 }
