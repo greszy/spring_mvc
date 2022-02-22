@@ -2,16 +2,30 @@ package com.test.hplus.beans;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
 
     @Id
     private int id;
+    //Here we are requiring the username to be at least six characters long, if it won't be, a custom message will be printed out.
+    @Size(min=6, message = "Username cannot be less than ")
     private String username;
+    /*
+    Here a regular expression is assigned as an allowed pattern for the password attribute.
+    The regular expression defined below accepts at least one capital letter
+    and the range of the password should be at between 6 and 10 characters.
+     */
+    @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "Password must have one upper case, one lower and should be between 6 and 10 characters." )
     private String password;
     private String gender;
+
+    @NotNull(message = "Activity cannot be left empty.")
     private String activity;
+    @NotNull(message = "First name cannot be left empty.")
     private String firstName;
     private String lastName;
     private String dateOfBirth;

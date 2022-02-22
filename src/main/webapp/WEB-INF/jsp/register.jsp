@@ -55,8 +55,8 @@
     			<label>Date of birth</label>
     			<form:input path="dateOfBirth" type="date" /><br/>
     			<label>Gender</label>
-    			<!-- The genderItems @ModelAttrribute in the HomeController is attached to the dropdown in this form
-    			<form:select path="gender" items=${genderItems}/>
+    			<!-- The genderItems @ModelAttrribute in the HomeController is attached to the dropdown in this form-->
+    			<form:select path="gender" items="${genderItems}"/>
     			<br/>
     			<input type="submit" value="Submit" id="submit">
     		</form:form>
