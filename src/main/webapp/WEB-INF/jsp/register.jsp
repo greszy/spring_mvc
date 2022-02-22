@@ -44,14 +44,14 @@
 	 <em>Register User</em><br/>
 	        <!-- When you attach a modelAttribute on a jsp page in the form tag and you have it in your method signature in the respective controller,
 	        that means you are enabling data binding through Spring MVC -->
-    		 <form:form method="post" action="#" modelAttribute="newUser" >
+    		 <form:form method="post" action="registeruser" modelAttribute="newUser" >
     			<label>Username</label> <form:input path="username" type="text" /><br/>
     			<label>Password</label> <form:input path="password" type="password" /><br/>
     			<label>First Name</label> <form:input path="firstName" type="text" /><br/>
     			<label>Last Name</label> <form:input path="lastName" type="text" /><br/>
     			<label>What do you want to do? </label> 
-				<form:radiobutton path="activity" id="activity" value="sport">Play a Sport?
-				<form:radiobutton path="activity" id="activity" value="gym">Hit the Gym?<br/>
+				<form:radiobutton path="activity" id="activity" value="sport"/>Play a Sport?
+				<form:radiobutton path="activity" id="activity" value="gym"/>Hit the Gym?<br/>
     			<label>Date of birth</label>
     			<form:input path="dateOfBirth" type="date" /><br/>
     			<label>Gender</label>
