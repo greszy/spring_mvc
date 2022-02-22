@@ -13,7 +13,7 @@ public class User {
     @Id
     private int id;
     //Here we are requiring the username to be at least six characters long, if it won't be, a custom message will be printed out.
-    @Size(min=6, message = "Username cannot be less than ")
+    @Size(min=6, message = "{username.cannot.be.less.than.six.characters}")
     private String username;
     /*
     Here a regular expression is assigned as an allowed pattern for the password attribute.
