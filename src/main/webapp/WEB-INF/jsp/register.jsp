@@ -55,6 +55,7 @@
 				<form:errors path="activity" cssClass="error"/><br/>
     			<label>Date of birth</label>
     			<form:input path="dateOfBirth" type="date" /><br/>
+    			<form:errors path="dateOfBirth" cssClass="error"/>
     			<label>Gender</label>
     			<!-- The genderItems @ModelAttrribute in the HomeController is attached to the dropdown in this form-->
     			<form:select path="gender" items="${genderItems}"/>
