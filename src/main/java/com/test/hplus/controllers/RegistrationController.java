@@ -30,7 +30,7 @@ public class RegistrationController {
         /*
         The registerCustomEditor accepts as arguments the datatype you want the string value to be converted to.
         Secondly it will demand the name of the field from the form that you want to convert.
-        The last parameter is an editor object that you will want to use to convert the field. 
+        The last parameter is an editor object that you will want to use to convert the field.
          */
         binder.registerCustomEditor(Date.class, "dateOfBirth", new CustomDateEditor(new SimpleDateFormat("yyy-MM-dd"), true));
     }
