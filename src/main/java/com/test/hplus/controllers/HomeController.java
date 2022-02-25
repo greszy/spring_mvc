@@ -37,19 +37,19 @@ public class HomeController {
         return "register";
     }
 
-    //The register jsp page won't be able to render properly without this default object, because the modelAttribute in the form requires an object to be assigned to it.
-    @ModelAttribute("newUser")
-    public User getDefaultUser() {
-        return new User();
-    }
-
-    @ModelAttribute("genderItems")
-    public List<String> getGenderItems() {
-        return Arrays.asList(new String[]{"Male", "Female", "Other"});
-    }
-
-    @ModelAttribute("login")
-    public Login getDefaultLogin() {
-        return new Login();
-    }
+//    The register jsp page won't be able to render properly without this default object, because the modelAttribute in the form requires an object to be assigned to it.
+//    @ModelAttribute("newUser")
+//    public User getDefaultUser() {
+//        return new User();
+//    }
+//
+//    @ModelAttribute("genderItems")
+//    public List<String> getGenderItems() {
+//        return Arrays.asList(new String[]{"Male", "Female", "Other"});
+//    }
+//
+//    @ModelAttribute("login")
+//    public Login getDefaultLogin() {
+//        return new Login();
+//    }
 }
