@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
-import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 import org.springframework.web.servlet.view.XmlViewResolver;
 
 @Configuration
@@ -69,15 +68,6 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         XmlViewResolver viewResolver = new XmlViewResolver();
         //We have to tell the resolver about the location of the xml file.
         viewResolver.setLocation(new ClassPathResource("views.xml"));
-        return viewResolver;
-    }
-
-    @Bean
-    public ResourceBundleViewResolver resourceBundleViewResolver() {
-        //This configuration means that all the views are defined in a properties file.
-        ResourceBundleViewResolver viewResolver = new ResourceBundleViewResolver();
-        //The base name of the properties file is "views".
-        viewResolver.setBasename("views");
         return viewResolver;
     }
 }
