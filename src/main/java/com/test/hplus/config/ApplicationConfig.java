@@ -33,14 +33,15 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
     InternalResourceViewResolver is commonly used for resolving jsp files.
      The jspViewResolver method makes sure that the jsp templates are picked up from the correct folders.
      */
-//    @Bean
-//    public InternalResourceViewResolver jspViewResolver() {
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/WEB-INF/jsp/");
-//        viewResolver.setSuffix(".jsp");
-//        viewResolver.setViewClass(JstlView.class);
-//        return viewResolver;
-//    }
+    @Bean
+    public InternalResourceViewResolver jspViewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/jsp/");
+        viewResolver.setSuffix(".jsp");
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setOrder(2);
+        return viewResolver;
+    }
 
     //The FormatterRegistry parameter will allow us to register any custom convertors.
     @Override
@@ -64,20 +65,21 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         return threadPoolTaskExecutor;
     }
 
-//    @Bean
-//    public XmlViewResolver xmlViewResolver() {
-//        XmlViewResolver viewResolver = new XmlViewResolver();
-//        //We have to tell the resolver about the location of the xml file.
-//        viewResolver.setLocation(new ClassPathResource("views.xml"));
-//        return viewResolver;
-//    }
-
     @Bean
-    public ResourceBundleViewResolver resourceBundleViewResolver() {
-        //This configuration means that all the views are defined in a properties file.
-        ResourceBundleViewResolver viewResolver = new ResourceBundleViewResolver();
-        //The base name of the properties file is "views".
-        viewResolver.setBasename("views");
+    public XmlViewResolver xmlViewResolver() {
+        XmlViewResolver viewResolver = new XmlViewResolver();
+        //We have to tell the resolver about the location of the xml file.
+        viewResolver.setLocation(new ClassPathResource("views.xml"));
+        viewResolver.setOrder(1);
         return viewResolver;
     }
+
+//    @Bean
+//    public ResourceBundleViewResolver resourceBundleViewResolver() {
+//        //This configuration means that all the views are defined in a properties file.
+//        ResourceBundleViewResolver viewResolver = new ResourceBundleViewResolver();
+//        //The base name of the properties file is "views".
+//        viewResolver.setBasename("views");
+//        return viewResolver;
+//    }
 }
