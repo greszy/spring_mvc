@@ -9,10 +9,13 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.servlet.ThemeResolver;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.theme.CookieThemeResolver;
+import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
@@ -90,6 +93,18 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
     protected void addInterceptors(InterceptorRegistry registry) {
         //Applying the addPathPatterns method means that the logging interceptor has to apply for every utl pattern of the application.
         registry.addInterceptor(new LoggingInterceptor()).addPathPatterns("/*");
+        //This is required to trap the change in the theme.
+        registry.addInterceptor(new ThemeChangeInterceptor());
 
+    }
+
+    @Bean
+    public ThemeResolver themeResolver() {
+        CookieThemeResolver cookieThemeResolver = new CookieThemeResolver();
+        //Here the resolver will pick upo the name of the theme from the cookie in the browser.
+        cookieThemeResolver.setCookieName("theme");
+        //If you are not picking up the theme, what should be the default theme?
+        cookieThemeResolver.setDefaultThemeName("client-theme1");
+        return cookieThemeResolver;
     }
 }
