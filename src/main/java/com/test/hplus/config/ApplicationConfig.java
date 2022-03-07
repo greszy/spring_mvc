@@ -9,17 +9,22 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ThemeResolver;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.theme.CookieThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 import org.springframework.web.servlet.view.XmlViewResolver;
+
+import java.util.Locale;
 
 @Configuration
 @ComponentScan(basePackages = "com.test.hplus")
@@ -94,7 +99,8 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         //Applying the addPathPatterns method means that the logging interceptor has to apply for every utl pattern of the application.
         registry.addInterceptor(new LoggingInterceptor()).addPathPatterns("/*");
         //This is required to trap the change in the theme.
-        registry.addInterceptor(new ThemeChangeInterceptor());
+        registry.addInterceptor(new ThemeChangeInterceptor());//comes with a default theme query parameter.
+        registry.addInterceptor(new LocaleChangeInterceptor());//comes wit a default locale query parameter.
 
     }
 
@@ -106,5 +112,15 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         //If you are not picking up the theme, what should be the default theme?
         cookieThemeResolver.setDefaultThemeName("client-theme1");
         return cookieThemeResolver;
+    }
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        CookieLocaleResolver cookieLocaleResolver = new CookieLocaleResolver();
+        //Setting up default locale.
+        cookieLocaleResolver.setDefaultLocale(Locale.US);
+        //Setting up the name of the cookie name.
+        cookieLocaleResolver.setCookieName("locale");
+        return cookieLocaleResolver;
     }
 }
