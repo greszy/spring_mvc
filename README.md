@@ -14,4 +14,29 @@ Over time I like to come back to these examples and do additional modifications.
 
 ## Key Topics
 
-Below are the topics that I have learned from following the Spring: Spring MVC course and reviewing it's coding examples. Whenever I make such lists I like to add questions that I think the course helps to answer:
+Below are the topics that I have learned from following the Spring: Spring MVC course and reviewing it's coding examples. Below are also included questions that the course helped me answer:
+
+* Spring MVC Features and Architecture
+  * What can we use Spring MVC for?
+  * How do Spring MVC projects work?
+  * What is the required setup for a Spring MVC project? 
+* Spring MVC Controllers Flow
+  * What is the role of a controller?
+  * How can we pass data from and to views? 
+* Data Validation
+  * How can we utilize Spring Validators to define and use validation rules?
+  * How can we use Spring tags to display errors related to validation? 
+  * Gow can we use Binders to convert strings into other datatypes? 
+  * How are Convertors different from Binders? 
+* Exception Handling
+  * How can we add custom error pages to a Spring MVC application?
+  * What is trhe role of exception handlers and how to implement them? 
+* Asynchronous Request Processing
+  * What is the difference between a conventional HTTP request and a request that using asunc processing? 
+  * What is required configuration for async processing in a Spring MVC application?
+* View Resolvers
+  * What are view resolvers?
+  * What type of view resolvers exist in Spring MVC?
+  * How can we implement different view resolvers in a Spring MVC application?
+  * What is view resolver chaining? 
+ 
