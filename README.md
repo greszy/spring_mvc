@@ -63,3 +63,8 @@ In the second case a path variable is utilized to perform the same type of searc
 The endpoint that handles the login returns a different response depending on the username and password of the login object that is passed into the request. 
 
 <img src='gifs/hplusappRestControllers.gif' title='Hplusapp REST Controllers Walkthrough' width='' alt='Hplusapp REST Controllers Walkthrough' />
+
+## Links
+
+This repository is based on the materials covered in:
+[LinkedIn Learning - Spring: Spring MVC](https://www.linkedin.com/learning/spring-spring-mvc-2/spring-mvc-for-robust-applications?autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5b101b04498e06fb6e2d8785&resume=false&u=78163626) 
