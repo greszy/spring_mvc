@@ -46,7 +46,20 @@ Below are the topics that I have learned from following the Spring: Spring MVC c
 * Spring MVC REST Controllers
  * How are REST Spring MVC controllers different from regular Spring MVC controllers? 
 
-## Video Examples
+## Video Walkthroughs
+
+### Hplusapp Walkthrough
 
 Below is a video walkthrough of the final web application that a listener can develop while following the guidance from the Spring: Spring MVC course. In the video you can see that multiple example features were added to the application. Those include retrieving product information from a database, creating new users and saving them in the database, using user information to log in, input validation, page redirection, errror handling through error pages and more.  
+
+<img src='gifs/springMVCwalkthrough.gif' title='Hplusapp Walkthrough' width='' alt='Hplusapp Walkthrough' />
  
+### Rest Controllers Walkthrough Using Postman
+
+In one of the latter parts of the course, one chapter covers how you can use Spring MVC to create a RESTFul service.
+The video below demonstrates how some implemented rest endpoints work in Postman. In the video we can see two examples of a GET request to retrieve the list of products by a provided name.
+The difference between those two request is that one the first case a request parameter is used to pass a string by which the product list will be found.
+In the second case a path variable is utilized to perform the same type of search. After the product search, a demo of the login rest controller is performed.
+The endpoint that handles the login returns a different response depending on the username and password of the login object that is passed into the request. 
+
+<img src='gifs/hplusappRestControllers.gif' title='Hplusapp REST Controllers Walkthrough' width='' alt='Hplusapp REST Controllers Walkthrough' />

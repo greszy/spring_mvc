@@ -35,9 +35,12 @@ public class LoginController {
         //Now instead of directing to the search page, with the use of forwarding, the login controller forwards to the user profile controller.
         return "forward:/userprofile";
     }
-    //Whenever an exception occurs in Login Controller the handleException will be called.
-    //By embedding the name of the exception class in the @ExceptionHandler annotation we make sure the method will handle exceptions with that specific name.
-//    @ExceptionHandler(ApplicationException.class)
+    /*
+    Whenever an exception occurs in Login Controller the handleException will be called.
+    By embedding the name of the exception class in the @ExceptionHandler annotation we make sure the method will handle exceptions with that specific name.
+    The exception handler is currently not used because the exceptions are passed to the global exception handler instead.
+    */
+    //@ExceptionHandler(ApplicationException.class)
 //    public String handleException() {
 //        System.out.println("in exception handler of Login Controller");
 //        return "error";
