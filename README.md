@@ -8,7 +8,7 @@ Part of my studies involves following online tutorials and courses, that I think
 I find these kind of study materials useful, especially when it involves some new programming frameworks like Spring. 
 Before I jump into building bigger projects, I always like to go over easier demos to get a better feeling of what the framework is offering. 
 Ketkee Aryamane's course is a great example of that kind of educational content. It offers a great overview of Spring MVC. For this course she prepared a great demo project that is helpful when trying to learn what are the building block of a Spring MVC web application. 
-You can read my full review of the Spring: Spring MVC here on my [blog](https://medium.com/@gregoryszy/introduction-3d69f1278f84) on Medium. 
+You can read my full review of the Spring: Spring MVC here on my [blog](https://medium.com/@gregoryszy/my-review-of-spring-spring-mvc-fb48077c7cb0) on Medium. 
 
 Over time I like to come back to these examples and do additional modifications. You will also see a lot of additional comments over the code. That is my way of taking notes, so I can solidify my understanding about what a specific line of code does and how does it relate to the whole project. Spring MVC has a lot to offer so I will treat this repository  as a playground where I can test new and old Spring MVC features, learn more about how to properly use Github and practice my writing skills. 
 
