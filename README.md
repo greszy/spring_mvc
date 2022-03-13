@@ -47,4 +47,6 @@ Below are the topics that I have learned from following the Spring: Spring MVC c
  * How are REST Spring MVC controllers different from regular Spring MVC controllers? 
 
 ## Video Examples
+
+Below is a video walkthrough of the final web application that a listener can develop while following the guidance from the Spring: Spring MVC course. In the video you can see that multiple example features were added to the application. Those include retrieving product information from a database, creating new users and saving them in the database, using user information to log in, input validation, page redirection, errror handling through error pages and more.  
  
