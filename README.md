@@ -39,4 +39,12 @@ Below are the topics that I have learned from following the Spring: Spring MVC c
   * What type of view resolvers exist in Spring MVC?
   * How can we implement different view resolvers in a Spring MVC application?
   * What is view resolver chaining? 
+* Interceptors and Themes
+ * How can we manipulate requests using interceptors? 
+ * How are themes used to modify the look and feel of views?
+ * How can website localization be implemented in Spring MVC? 
+* Spring MVC REST Controllers
+ * How are REST Spring MVC controllers different from regular Spring MVC controllers? 
+
+## Video Examples
  
